@@ -9,7 +9,6 @@ functionality different testing client-server tools like Postman, Insomnia can b
 #Technologies
 List of used technologies:
 * Apache Maven 
-* Apache Log4j2
 * Git 
 * Hibernate 5  
 * IntelliJ IDEA 2021.1.1 (Ultimate Edition)
