@@ -49,8 +49,7 @@ credentials from your MySQL connection.
 5.Setup logger: Open file src/main/resources/log4j2.xml in this project using IDE and set value 
 `Property name="logdir"` as an absolute path of this project directory on your computer 
 (i.e. `C:\Users\MyUser\IdeaProjects\football-tickets-app`) or any custom directory, where you want 
-to locate log files, and it has modifying permissions of local OS. This logger is used to keep records 
-of user's unsuccessful authentication attempts.
+to locate log files, and it has modifying permissions of local OS. 
 
 6.Deploy the project on the web server using IDE: `Run`->`Run`(or press `Shift+F10` on Windows).
 
