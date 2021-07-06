@@ -9,6 +9,7 @@ functionality different testing client-server tools like Postman, Insomnia can b
 #Technologies
 List of used technologies:
 * Apache Maven 
+* Apache Log4j2  
 * Git 
 * Hibernate 5  
 * IntelliJ IDEA 2021.1.1 (Ultimate Edition)
@@ -45,7 +46,13 @@ script `Query`->`Execute (All or Selection)` (or press `Ctrl+Shift+Enter` on Win
 project using IDE and set values `user`, `password` and localhost port value according to the
 credentials from your MySQL connection.
 
-5.Deploy the project on the web server using IDE: `Run`->`Run`(or press `Shift+F10` on Windows).
+5.Setup logger: Open file src/main/resources/log4j2.xml in this project using IDE and set value 
+`Property name="logdir"` as an absolute path of this project directory on your computer 
+(i.e. `C:\Users\MyUser\IdeaProjects\football-tickets-app`) or any custom directory, where you want 
+to locate log files, and it has modifying permissions of local OS. This logger is used to keep records 
+of user's unsuccessful authentication attempts.
+
+6.Deploy the project on the web server using IDE: `Run`->`Run`(or press `Shift+F10` on Windows).
 
 To use another DBMS that supports SQL script you have to create new file in `src/main/resources/`
 folder with the same structure and extension as `mysql_db.properties` and set values in compliance with
@@ -66,10 +73,10 @@ Your web browser after successful deployment will automatically open the startin
 application. For the initial login use credentials of the first initialized in the database user from the file
 `src/main/java/football/tickets/app/config/DataInitializer.java`. It has "ADMIN" level of access to the endpoints.
 Your can also register a new user sending POST request to the endpoint http://localhost:8080/register with
-new credentials in JSON format like `{"email":"user@user.com", "password":"12345678", "repeatPassword":"12345678"}`.
+new credentials in JSON format like `{"email":"user@user.com", "password":"123User!", "repeatPassword":"123User!"}`.
 Every new user has the default "USER" access level.  
 
-"USER" has following options: 
+"USER" role has following options: 
 * Display all stadiums, rivalries, available game-events, orders history;
 * Add tickets in his shopping cart;
 * Complete order of all tickets stored in the cart;

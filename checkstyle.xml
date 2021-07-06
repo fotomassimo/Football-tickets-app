@@ -20,14 +20,14 @@
 
     <property name="severity" value="error"/>
 
-    <property name="fileExtensions" value="java, properties, xml"/>
+    <property name="fileExtensions" value="java, xml"/>
     <!-- Checks for whitespace                               -->
     <!-- See http://checkstyle.sf.net/config_whitespace.html -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
     <module name="NewlineAtEndOfFile">
-        <property name="fileExtensions" value="java, properties, xml"/>
+        <property name="fileExtensions" value="java, xml"/>
     </module>
     <module name="LineLength">
         <property name="max" value="100"/>
