@@ -1,12 +1,11 @@
 ## FOOTBALL-TICKETS-APP
 
-#General info
+# General info
 Football-tickets-app is a REST-full web application that provides functionality of on-line purchasing
 football games tickets. 
-Because the project doesn't have interactive UI part, to test its
-functionality different testing client-server tools like Postman, Insomnia can be used. 
+To test its functionality different testing client-server tools like Postman, Insomnia can be used. 
 
-#Technologies
+# Technologies
 List of used technologies:
 * Apache Maven 
 * Apache Log4j2  
@@ -16,13 +15,12 @@ List of used technologies:
 * JDK 11
 * Lombok   
 * MySQL 8.0
-* OS Windows 8.1
 * Passay  
 * Spring frameworks (Webmvc, Security) 5  
 * SQL
 * Tomcat 9
 
-#Installation
+# Installation
 Application can be launched on a computer that has JRE (JDK 11), IDE, Maven, Tomcat and MySQL Workbench
 installed.
 
@@ -58,7 +56,7 @@ folder with the same structure and extension as `mysql_db.properties` and set va
 the DBMS vendor official documentation. Then change value "classpath:" of the annotation @PropertySource
 in the file `src/main/java/football/tickets/app/config/AppConfig.java` to the name of your custom file.
 
-#Usage
+# Usage
 The main entities of the application are:
 * User as a ticket-shop customer, that can have different roles(permissions);
 * Shopping cart where user can hold ordered tickets; 
