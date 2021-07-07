@@ -3,6 +3,7 @@ package football.tickets.app.security;
 import football.tickets.app.exception.DataProcessingException;
 import football.tickets.app.model.User;
 import football.tickets.app.service.UserService;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,11 +13,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
-    private final Logger logger;
+    private static final Logger logger = LogManager.getLogger(CustomUserDetailsService.class);
     private final UserService userService;
 
-    public CustomUserDetailsService(Logger logger, UserService userService) {
-        this.logger = logger;
+    public CustomUserDetailsService(UserService userService) {
         this.userService = userService;
     }
 
@@ -38,6 +38,5 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .map(r -> r.getRoleName().name())
                 .toArray(String[]::new));
         return builder.build();
-
     }
 }
